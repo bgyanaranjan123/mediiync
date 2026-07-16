@@ -1,0 +1,994 @@
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 720px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  isolation: isolate;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(3, 4, 10, 0.95),
+      rgba(12, 13, 25, 0.88),
+      rgba(2, 3, 8, 0.96)
+    ),
+    url("/hero-bg.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+
+/* =====================================================
+   NOISE
+===================================================== */
+
+.hero-noise {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  opacity: 0.05;
+
+  background-image:
+    url(
+      "data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.6'/%3E%3C/svg%3E"
+    );
+}
+
+
+/* =====================================================
+   AMBIENT GLOWS
+===================================================== */
+
+.ambient-glow {
+  position: absolute;
+
+  width: 600px;
+
+  height: 600px;
+
+  border-radius: 50%;
+
+  filter: blur(130px);
+
+  opacity: 0.18;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  animation:
+    ambientPulse
+    8s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+.glow-one {
+  top: -320px;
+
+  left: -250px;
+
+  background:
+    rgba(
+      150,
+      120,
+      255,
+      0.4
+    );
+}
+
+
+.glow-two {
+  right: -280px;
+
+  bottom: -330px;
+
+  background:
+    rgba(
+      255,
+      170,
+      100,
+      0.3
+    );
+
+  animation-delay: -3s;
+}
+
+
+@keyframes ambientPulse {
+  from {
+    transform: scale(0.85);
+
+    opacity: 0.12;
+  }
+
+  to {
+    transform: scale(1.25);
+
+    opacity: 0.3;
+  }
+}
+
+
+/* =====================================================
+   FLOATING AREA
+===================================================== */
+
+.event-animation {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 4;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   IMAGE HOLDER
+===================================================== */
+
+.orbit-image {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  width: 82px;
+
+  height: 82px;
+
+  will-change: transform;
+
+  transform-origin: center;
+
+  transition:
+    opacity
+    0.4s
+    ease;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.image-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.8
+    );
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.08
+    );
+
+  box-shadow:
+    0 0 16px
+    rgba(
+      255,
+      255,
+      255,
+      0.55
+    ),
+
+    0 0 40px
+    rgba(
+      255,
+      255,
+      255,
+      0.2
+    ),
+
+    inset 0 0 20px
+    rgba(
+      255,
+      255,
+      255,
+      0.2
+    );
+
+  animation:
+    imageBreathing
+    3.5s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+.image-wrapper img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  filter:
+    saturate(1.1)
+    contrast(1.08);
+}
+
+
+@keyframes imageBreathing {
+  0% {
+    transform:
+      scale(0.94)
+      rotate(-2deg);
+  }
+
+  50% {
+    transform:
+      scale(1.05)
+      rotate(2deg);
+  }
+
+  100% {
+    transform:
+      scale(0.98)
+      rotate(-2deg);
+  }
+}
+
+
+/* =====================================================
+   WHITE SMOKE
+===================================================== */
+
+.smoke {
+  position: absolute;
+
+  z-index: -1;
+
+  width: 34px;
+
+  height: 34px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(
+        255,
+        255,
+        255,
+        0.8
+      ) 0%,
+
+      rgba(
+        255,
+        255,
+        255,
+        0.45
+      ) 28%,
+
+      rgba(
+        255,
+        255,
+        255,
+        0.16
+      ) 55%,
+
+      transparent 78%
+    );
+
+  filter: blur(10px);
+
+  animation:
+    smokeRelease
+    4.8s
+    ease-out
+    infinite;
+}
+
+
+.smoke-one {
+  left: 8%;
+
+  bottom: -5%;
+}
+
+
+.smoke-two {
+  left: 42%;
+
+  bottom: -10%;
+
+  animation-delay: -1.5s;
+}
+
+
+.smoke-three {
+  right: 8%;
+
+  bottom: 0;
+
+  animation-delay: -3s;
+}
+
+
+@keyframes smokeRelease {
+  0% {
+    opacity: 0;
+
+    transform:
+      translate(
+        0,
+        15px
+      )
+      scale(0.2);
+  }
+
+  15% {
+    opacity: 0.75;
+  }
+
+  35% {
+    opacity: 0.55;
+
+    transform:
+      translate(
+        -25px,
+        -50px
+      )
+      scale(1.5);
+  }
+
+  60% {
+    opacity: 0.3;
+
+    transform:
+      translate(
+        30px,
+        -100px
+      )
+      scale(2.5);
+  }
+
+  80% {
+    opacity: 0.12;
+
+    transform:
+      translate(
+        -35px,
+        -150px
+      )
+      scale(3.5);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translate(
+        40px,
+        -200px
+      )
+      scale(4.5);
+  }
+}
+
+
+/* =====================================================
+   CENTER CONTENT
+===================================================== */
+
+.hero-content {
+  position: relative;
+
+  z-index: 100;
+
+  isolation: isolate;
+
+  width: 100%;
+
+  padding: 40px 20px;
+
+  text-align: center;
+
+  color: white;
+}
+
+
+/* =====================================================
+   TEXT PROTECTION
+===================================================== */
+
+.hero-content::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: -1;
+
+  top: 50%;
+
+  left: 50%;
+
+  width:
+    min(
+      720px,
+      92vw
+    );
+
+  height: 500px;
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse,
+
+      rgba(
+        3,
+        4,
+        10,
+        0.96
+      ) 0%,
+
+      rgba(
+        3,
+        4,
+        10,
+        0.82
+      ) 42%,
+
+      rgba(
+        3,
+        4,
+        10,
+        0.38
+      ) 65%,
+
+      transparent 82%
+    );
+
+  filter: blur(20px);
+}
+
+
+/* =====================================================
+   EYEBROW
+===================================================== */
+
+.eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-bottom: 22px;
+
+  font-size: 10px;
+
+  letter-spacing: 4px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.62
+    );
+}
+
+
+.eyebrow span {
+  width: 30px;
+
+  height: 1px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.6
+    );
+}
+
+
+/* =====================================================
+   AURA
+===================================================== */
+
+.title-aura {
+  position: absolute;
+
+  top: 43%;
+
+  left: 50%;
+
+  width: 500px;
+
+  height: 240px;
+
+  z-index: -1;
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse,
+
+      rgba(
+        170,
+        140,
+        255,
+        0.34
+      ),
+
+      rgba(
+        255,
+        180,
+        120,
+        0.1
+      ),
+
+      transparent 72%
+    );
+
+  filter: blur(38px);
+
+  animation:
+    titleAura
+    4s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+@keyframes titleAura {
+  from {
+    transform:
+      translate(
+        -50%,
+        -50%
+      )
+      scale(0.85);
+  }
+
+  to {
+    transform:
+      translate(
+        -50%,
+        -50%
+      )
+      scale(1.2);
+  }
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.hero-content h1 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      58px,
+      9vw,
+      130px
+    );
+
+  line-height: 0.85;
+
+  letter-spacing: -5px;
+
+  font-weight: 300;
+
+  color: white;
+
+  text-shadow:
+    0 0 20px
+    rgba(
+      255,
+      255,
+      255,
+      0.25
+    ),
+
+    0 0 70px
+    rgba(
+      150,
+      120,
+      255,
+      0.4
+    );
+
+  animation:
+    titleReveal
+    1.2s
+    ease
+    both;
+}
+
+
+.hero-content h1 strong {
+  display: block;
+
+  margin-top: 14px;
+
+  font-size: 0.34em;
+
+  letter-spacing: 12px;
+
+  font-weight: 700;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.72
+    );
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.hero-content p {
+  margin: 32px 0 36px;
+
+  font-size:
+    clamp(
+      16px,
+      2vw,
+      22px
+    );
+
+  line-height: 1.7;
+
+  letter-spacing: 1px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.68
+    );
+
+  animation:
+    fadeUp
+    1s
+    0.3s
+    ease
+    both;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.book-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding:
+    16px
+    22px
+    16px
+    28px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.38
+    );
+
+  border-radius: 50px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.08
+    );
+
+  color: white;
+
+  font-size: 14px;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(15px);
+
+  transition:
+    0.4s
+    ease;
+}
+
+
+.book-button:hover {
+  transform:
+    translateY(-5px)
+    scale(1.04);
+
+  box-shadow:
+    0 0 25px
+    rgba(
+      255,
+      255,
+      255,
+      0.25
+    );
+}
+
+
+.book-button b {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 32px;
+
+  height: 32px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  color: black;
+
+  font-size: 18px;
+
+  transition:
+    0.3s
+    ease;
+}
+
+
+.book-button:hover b {
+  transform: rotate(45deg);
+}
+
+
+/* =====================================================
+   SCROLL INDICATOR
+===================================================== */
+
+.scroll-indicator {
+  position: absolute;
+
+  bottom: 24px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.4
+    );
+}
+
+
+.scroll-indicator span {
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow:
+    0 0 15px white;
+
+  animation:
+    scrollPulse
+    1.8s
+    ease-in-out
+    infinite;
+}
+
+
+@keyframes scrollPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform: scale(1.4);
+  }
+}
+
+
+/* =====================================================
+   TITLE ANIMATION
+===================================================== */
+
+@keyframes titleReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(35px)
+      scale(0.9);
+
+    filter: blur(12px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+    filter: blur(0);
+  }
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+  .hero {
+    min-height: 650px;
+  }
+
+  .orbit-image {
+    width: 68px;
+
+    height: 68px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 680px;
+  }
+
+  .orbit-image {
+    width: 48px;
+
+    height: 48px;
+  }
+
+  .hero-content h1 {
+    letter-spacing: -3px;
+  }
+
+  .hero-content h1 strong {
+    letter-spacing: 7px;
+  }
+
+  .title-aura {
+    width: 320px;
+
+    height: 160px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+}

@@ -1,0 +1,936 @@
+/* =====================================================
+   AURELIA FOOTER
+===================================================== */
+
+.aurelia-footer {
+
+  position: relative;
+
+  min-height: 520px;
+
+  overflow: hidden;
+
+  color: #403747;
+
+  background:
+
+    linear-gradient(
+
+      135deg,
+
+      #f9f7fb,
+
+      #f1edf5
+
+    );
+
+}
+
+
+/* =====================================================
+   FULL TRANSPARENT BACKGROUND IMAGE
+===================================================== */
+
+.footer-background-image {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  background-image:
+
+    url("/src/assets/footer-bg.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  opacity: 0.22;
+
+  filter:
+
+    saturate(0.7)
+
+    contrast(0.85);
+
+  animation:
+
+    footerImageFloat
+
+    18s
+
+    ease-in-out
+
+    infinite
+
+    alternate;
+
+}
+
+
+@keyframes footerImageFloat {
+
+  from {
+
+    transform:
+
+      scale(1)
+
+      translate(
+        0,
+        0
+      );
+
+  }
+
+  to {
+
+    transform:
+
+      scale(1.08)
+
+      translate(
+        -1%,
+        -1%
+      );
+
+  }
+
+}
+
+
+/* =====================================================
+   TRANSPARENT WHITE OVERLAY
+===================================================== */
+
+.footer-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+
+    linear-gradient(
+
+      90deg,
+
+      rgba(
+        255,
+        255,
+        255,
+        0.92
+      ),
+
+      rgba(
+        255,
+        255,
+        255,
+        0.70
+      ),
+
+      rgba(
+        255,
+        255,
+        255,
+        0.88
+      )
+
+    );
+
+  backdrop-filter:
+
+    blur(
+      2px
+    );
+
+}
+
+
+/* =====================================================
+   AURA
+===================================================== */
+
+.footer-aura {
+
+  position: absolute;
+
+  z-index: 2;
+
+  width: 360px;
+
+  height: 360px;
+
+  border-radius: 50%;
+
+  filter:
+
+    blur(
+      100px
+    );
+
+  opacity: 0.18;
+
+  pointer-events: none;
+
+  animation:
+
+    footerAuraMove
+
+    12s
+
+    ease-in-out
+
+    infinite
+
+    alternate;
+
+}
+
+
+.footer-aura-one {
+
+  top: -200px;
+
+  left: 10%;
+
+  background: #b8a7e6;
+
+}
+
+
+.footer-aura-two {
+
+  right: 5%;
+
+  bottom: -220px;
+
+  background: #e8bd9e;
+
+  animation-delay: -5s;
+
+}
+
+
+@keyframes footerAuraMove {
+
+  from {
+
+    transform:
+
+      translate(
+        -40px,
+        20px
+      )
+
+      scale(0.8);
+
+  }
+
+  to {
+
+    transform:
+
+      translate(
+        50px,
+        -30px
+      )
+
+      scale(1.2);
+
+  }
+
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.footer-content {
+
+  position: relative;
+
+  z-index: 5;
+
+  display: grid;
+
+  grid-template-columns:
+
+    1.6fr
+
+    1fr
+
+    1.2fr
+
+    1.3fr;
+
+  gap: 70px;
+
+  max-width: 1450px;
+
+  margin: auto;
+
+  padding:
+
+    90px
+
+    70px
+
+    70px;
+
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.footer-brand {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+}
+
+
+.footer-logo-wrap {
+
+  position: relative;
+
+  width: 92px;
+
+  height: 92px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+}
+
+
+.footer-logo {
+
+  position: relative;
+
+  z-index: 3;
+
+  width: 70px;
+
+  height: 70px;
+
+  object-fit: contain;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow:
+
+    0 12px 30px
+
+    rgba(
+      60,
+      45,
+      75,
+      0.16
+    );
+
+}
+
+
+.footer-orbit {
+
+  position: absolute;
+
+  border:
+
+    1px solid
+
+    rgba(
+      90,
+      75,
+      105,
+      0.35
+    );
+
+  border-radius: 50%;
+
+}
+
+
+.footer-orbit-one {
+
+  width: 100px;
+
+  height: 38px;
+
+  transform:
+
+    rotate(
+      35deg
+    );
+
+  animation:
+
+    footerOrbitOne
+
+    8s
+
+    linear
+
+    infinite;
+
+}
+
+
+.footer-orbit-two {
+
+  width: 38px;
+
+  height: 100px;
+
+  transform:
+
+    rotate(
+      -35deg
+    );
+
+  animation:
+
+    footerOrbitTwo
+
+    10s
+
+    linear
+
+    infinite;
+
+}
+
+
+@keyframes footerOrbitOne {
+
+  to {
+
+    transform:
+
+      rotate(
+        395deg
+      );
+
+  }
+
+}
+
+
+@keyframes footerOrbitTwo {
+
+  to {
+
+    transform:
+
+      rotate(
+        -395deg
+      );
+
+  }
+
+}
+
+
+.footer-brand h2 {
+
+  margin: 0;
+
+  font-family:
+
+    Georgia,
+
+    serif;
+
+  font-size: 34px;
+
+  letter-spacing: 8px;
+
+  color: #39303f;
+
+}
+
+
+.footer-tagline {
+
+  margin:
+
+    15px
+
+    0
+
+    14px;
+
+  font-family:
+
+    Georgia,
+
+    serif;
+
+  font-size: 21px;
+
+  line-height: 1.45;
+
+  color: #665b6d;
+
+}
+
+
+.footer-description {
+
+  max-width: 290px;
+
+  margin: 0;
+
+  color: #83798a;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+/* =====================================================
+   FOOTER SOCIAL ICONS
+   BLACK FRAME STYLE
+===================================================== */
+
+.aurelia-socials {
+
+  display: flex;
+
+  gap: 14px;
+
+  margin-top: 26px;
+
+}
+
+
+.aurelia-socials a {
+
+  width: 44px;
+
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1.5px solid #111111;
+
+  border-radius: 50%;
+
+  color: #111111;
+
+  background: transparent;
+
+  text-decoration: none;
+
+  transition:
+
+    transform 0.3s ease,
+
+    background 0.3s ease,
+
+    color 0.3s ease,
+
+    box-shadow 0.3s ease;
+
+}
+
+
+.aurelia-socials a:hover {
+
+  color: #ffffff;
+
+  background: #111111;
+
+  transform:
+
+    translateY(-5px)
+
+    scale(1.08);
+
+  box-shadow:
+
+    0 10px 25px
+
+    rgba(0, 0, 0, 0.18);
+
+}
+
+
+/* ICON SIZE */
+
+.aurelia-socials svg {
+
+  width: 20px;
+
+  height: 20px;
+
+  fill: currentColor;
+
+}
+
+
+/* REMOVE ALL COLORED GOOGLE ICON PARTS */
+
+.google-blue,
+.google-green,
+.google-yellow,
+.google-red {
+
+  fill: currentColor;
+
+}
+
+
+/* INSTAGRAM DOT */
+
+.instagram-dot {
+
+  fill: currentColor;
+
+}
+/* =====================================================
+   FOOTER COLUMNS
+===================================================== */
+
+.footer-column {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+}
+
+
+.footer-column h3 {
+
+  margin:
+
+    12px
+
+    0
+
+    25px;
+
+  color: #3c3344;
+
+  font-size: 16px;
+
+  letter-spacing: 1.5px;
+
+}
+
+
+.footer-column a {
+
+  position: relative;
+
+  margin-bottom: 15px;
+
+  color: #817686;
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+
+    0.3s
+
+    ease;
+
+}
+
+
+.footer-column a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -4px;
+
+  width: 0;
+
+  height: 1px;
+
+  background: #554a5d;
+
+  transition:
+
+    0.3s
+
+    ease;
+
+}
+
+
+.footer-column a:hover {
+
+  color: #3d3444;
+
+  transform:
+
+    translateX(
+      5px
+    );
+
+}
+
+
+.footer-column a:hover::after {
+
+  width: 100%;
+
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.footer-contact p {
+
+  margin: 0 0 8px;
+
+  color: #817686;
+
+  font-size: 15px;
+
+}
+
+
+.footer-contact-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 20px;
+
+  padding:
+
+    13px
+
+    18px;
+
+  border:
+
+    1px solid
+
+    #d1c8d8;
+
+  border-radius: 30px;
+
+  color: #4b4052 !important;
+
+  background:
+
+    rgba(
+      255,
+      255,
+      255,
+      0.55
+    );
+
+}
+
+
+.footer-contact-button span {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 24px;
+
+  height: 24px;
+
+  border-radius: 50%;
+
+  background: #4b4052;
+
+  color: white;
+
+}
+
+
+.footer-contact-button:hover {
+
+  color: white !important;
+
+  background: #4b4052;
+
+  transform: translateY(-3px) !important;
+
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.footer-bottom {
+
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding:
+
+    22px
+
+    70px;
+
+  border-top:
+
+    1px solid
+
+    rgba(
+      90,
+      75,
+      105,
+      0.15
+    );
+
+  color: #958b9c;
+
+  font-size: 11px;
+
+  letter-spacing: 0.5px;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .footer-content {
+
+    grid-template-columns:
+
+      1fr
+
+      1fr;
+
+    gap: 45px;
+
+    padding:
+
+      70px
+
+      40px;
+
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .footer-content {
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding:
+
+      60px
+
+      25px
+
+      45px;
+
+  }
+
+
+  .footer-brand {
+
+    align-items: center;
+
+    text-align: center;
+
+  }
+
+
+  .footer-description {
+
+    text-align: center;
+
+  }
+
+
+  .footer-column {
+
+    align-items: center;
+
+    text-align: center;
+
+  }
+
+
+  .footer-bottom {
+
+    flex-direction: column;
+
+    text-align: center;
+
+    padding:
+
+      20px;
+
+  }
+
+}
