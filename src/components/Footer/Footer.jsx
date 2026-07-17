@@ -33,7 +33,7 @@ const Footer = () => {
             <span className="footer-orbit footer-orbit-two"></span>
 
             <img
-              src="/src/assets/logo.jpg"
+              src="src/assets/logo.jpeg"
               alt="Aurelia Logo"
               className="footer-logo"
             />
