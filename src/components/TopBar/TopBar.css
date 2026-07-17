@@ -1,459 +1,716 @@
-/* =====================================================
-   AURELIA TOP BAR
-===================================================== */
+/* ===========================================================
+   PREMIUM AURELIA TOPBAR
+=========================================================== */
 
-.aurelia-topbar {
+.aurelia-topbar{
 
-  position: relative;
+    position:relative;
 
-  z-index: 1100;
+    width:100%;
 
-  width: 100%;
+    height:58px;
 
-  min-height: 48px;
+    display:flex;
 
-  display: flex;
+    justify-content:space-between;
 
-  align-items: center;
+    align-items:center;
 
-  justify-content: space-between;
+    padding:0 55px;
 
-  padding: 0 42px;
+    overflow:hidden;
 
-  overflow: hidden;
+    background:rgba(255,255,255,.72);
 
-  color: #625a69;
+    backdrop-filter:blur(28px);
 
-  background:
+    -webkit-backdrop-filter:blur(28px);
 
-    rgba(
-      255,
-      255,
-      255,
-      0.78
-    );
+    border-bottom:1px solid rgba(255,255,255,.45);
 
-  border-bottom:
+    z-index:1200;
 
-    1px solid
+}
 
-    rgba(
-      80,
-      65,
-      95,
-      0.10
-    );
+/* ===========================================================
+   PREMIUM BACKGROUND
+=========================================================== */
 
-  backdrop-filter:
+.topbar-bg{
 
-    blur(
-      20px
-    );
+    position:absolute;
 
-  -webkit-backdrop-filter:
+    inset:0;
 
-    blur(
-      20px
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.78),
+        rgba(245,249,255,.92),
+        rgba(255,255,255,.78)
     );
 
 }
 
+.topbar-noise{
 
-/* =====================================================
-   AURA
-===================================================== */
+    position:absolute;
 
-.topbar-aura {
+    inset:0;
 
-  position: absolute;
+    opacity:.04;
 
-  width: 230px;
+    background-image:
 
-  height: 100px;
+    radial-gradient(circle,#000 1px,transparent 1px);
 
-  border-radius: 50%;
+    background-size:26px 26px;
 
-  filter:
+}
 
-    blur(
-      65px
+/* ===========================================================
+   FLOATING AURA
+=========================================================== */
+
+.topbar-aura{
+
+    position:absolute;
+
+    width:260px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    filter:blur(70px);
+
+    opacity:.35;
+
+}
+
+.aura-one{
+
+    top:-70px;
+
+    left:12%;
+
+    background:#d7f4ff;
+
+    animation:auraOne 10s ease-in-out infinite alternate;
+
+}
+
+.aura-two{
+
+    bottom:-70px;
+
+    right:12%;
+
+    background:#e4d6ff;
+
+    animation:auraTwo 9s ease-in-out infinite alternate;
+
+}
+
+@keyframes auraOne{
+
+    from{
+
+        transform:
+        translateX(-30px)
+        scale(.9);
+
+    }
+
+    to{
+
+        transform:
+        translateX(45px)
+        scale(1.2);
+
+    }
+
+}
+
+@keyframes auraTwo{
+
+    from{
+
+        transform:
+        translateX(35px)
+        scale(.85);
+
+    }
+
+    to{
+
+        transform:
+        translateX(-35px)
+        scale(1.15);
+
+    }
+
+}
+
+/* ===========================================================
+   MOVING LIGHT
+=========================================================== */
+
+.topbar-light{
+
+    position:absolute;
+
+    top:-50%;
+
+    left:-25%;
+
+    width:35%;
+
+    height:220%;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.85),
+
+    transparent);
+
+    transform:rotate(18deg);
+
+    animation:lightMove 8s linear infinite;
+
+}
+
+@keyframes lightMove{
+
+    100%{
+
+        left:130%;
+
+    }
+
+}
+
+/* ===========================================================
+   LAYOUT
+=========================================================== */
+
+.topbar-left{
+
+    position:relative;
+
+    z-index:10;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
+}
+
+.topbar-right{
+
+    position:relative;
+
+    z-index:10;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+/* ===========================================================
+   ANIMATED CONTACT ITEMS
+=========================================================== */
+
+.topbar-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    animation:itemFade 1s ease forwards;
+
+    transition:.35s;
+
+}
+
+.topbar-item:hover{
+
+    transform:translateY(-3px);
+
+}
+
+@keyframes itemFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================================================
+   ICON BOX
+=========================================================== */
+
+.icon-box{
+
+    width:36px;
+
+    height:36px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.95),
+        rgba(220,245,255,.65)
     );
 
-  opacity: 0.16;
+    border:1px solid rgba(255,255,255,.85);
 
-  pointer-events: none;
+    color:#3b4354;
 
-  animation:
+    box-shadow:
 
-    topbarAuraMove
+    0 10px 30px rgba(120,185,255,.12);
 
-    9s
-
-    ease-in-out
-
-    infinite
-
-    alternate;
+    transition:.35s;
 
 }
 
+.topbar-item:hover .icon-box{
 
-.topbar-aura-left {
+    transform:rotate(12deg) scale(1.12);
 
-  top: -70px;
+    box-shadow:
 
-  left: 12%;
-
-  background: #b9a8e5;
-
-}
-
-
-.topbar-aura-right {
-
-  right: 15%;
-
-  bottom: -75px;
-
-  background: #e8bea1;
-
-  animation-delay: -4s;
+    0 16px 40px rgba(120,185,255,.22);
 
 }
 
+/* ===========================================================
+   TEXT
+=========================================================== */
 
-@keyframes topbarAuraMove {
+.text-box{
 
-  from {
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.text-box small{
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    color:#8d94a3;
+
+    text-transform:uppercase;
+
+}
+
+.text-box span{
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:#2b2f39;
+
+    position:relative;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #2d2d2d,
+        #5a6570,
+        #2d2d2d
+    );
+
+    background-size:220%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:textFlow 6s linear infinite;
+
+}
+
+@keyframes textFlow{
+
+    100%{
+
+        background-position:220%;
+
+    }
+
+}
+/* ===========================================================
+   PREMIUM SOCIAL ICONS
+=========================================================== */
+
+.social-circle{
+
+    position:relative;
+
+    width:40px;
+
+    height:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    border-radius:50%;
+
+    color:#404854;
+
+    background:
+    rgba(255,255,255,.82);
+
+    border:1px solid rgba(255,255,255,.95);
+
+    overflow:hidden;
+
+    transition:
+    .45s;
+
+    box-shadow:
+    0 8px 25px rgba(110,150,255,.08);
+
+}
+
+.social-circle::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    rgba(255,255,255,.95),
+    rgba(220,245,255,.45),
+    rgba(225,220,255,.40));
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.social-circle i{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:15px;
+
+    transition:.4s;
+
+}
+
+.social-circle:hover{
 
     transform:
+    translateY(-5px)
+    scale(1.12);
 
-      translateX(
-        -30px
-      )
+}
 
-      scale(
-        0.8
-      );
+.social-circle:hover::before{
 
-  }
+    opacity:1;
 
-  to {
+}
+
+.social-circle:hover i{
 
     transform:
-
-      translateX(
-        40px
-      )
-
-      scale(
-        1.2
-      );
-
-  }
+    rotate(360deg);
 
 }
 
+/* Facebook */
 
-/* =====================================================
-   CONTACT DETAILS
-===================================================== */
+.social-circle:nth-child(1):hover{
 
-.topbar-contact {
+    color:#1877F2;
 
-  position: relative;
-
-  z-index: 2;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 38px;
+    box-shadow:
+    0 10px 30px rgba(24,119,242,.25);
 
 }
 
+/* Instagram */
 
-.topbar-item {
+.social-circle:nth-child(2):hover{
 
-  display: flex;
+    color:#E1306C;
 
-  align-items: center;
-
-  gap: 9px;
-
-  color: #706776;
-
-  font-size: 12px;
-
-  font-weight: 500;
-
-  letter-spacing: 0.15px;
-
-  white-space: nowrap;
-
-  text-decoration: none;
-
-  transition:
-
-    color 0.3s ease,
-
-    transform 0.3s ease;
+    box-shadow:
+    0 10px 30px rgba(225,48,108,.22);
 
 }
 
+/* Youtube */
 
-.topbar-item:hover {
+.social-circle:nth-child(3):hover{
 
-  color: #352d3c;
+    color:#FF0000;
 
-  transform:
-
-    translateY(
-      -1px
-    );
+    box-shadow:
+    0 10px 30px rgba(255,0,0,.22);
 
 }
 
+/* WhatsApp */
 
-.topbar-icon {
+.social-circle:nth-child(4):hover{
 
-  display: flex;
+    color:#25D366;
 
-  align-items: center;
-
-  justify-content: center;
-
-  width: 25px;
-
-  height: 25px;
-
-  border: 1px solid #ded7e2;
-
-  border-radius: 50%;
-
-  color: #756b7d;
-
-  background:
-
-    rgba(
-      255,
-      255,
-      255,
-      0.55
-    );
-
-  transition:
-
-    0.3s ease;
+    box-shadow:
+    0 10px 30px rgba(37,211,102,.22);
 
 }
 
+/* ===========================================================
+   PREMIUM GLOWING BOTTOM LINE
+=========================================================== */
 
-.topbar-item:hover .topbar-icon {
+.topbar-bottom-line{
 
-  color: #403747;
+    position:absolute;
 
-  border-color: #aaa0b0;
+    left:0;
 
-  transform:
+    bottom:0;
 
-    scale(
-      1.08
-    );
+    width:100%;
 
-}
+    height:2px;
 
+    overflow:hidden;
 
-.topbar-icon i {
-
-  font-size: 10px;
-
-}
-
-
-.topbar-item b {
-
-  margin: 0 4px;
-
-  color: #b0a7b5;
-
-  font-weight: 400;
+    background:
+    rgba(255,255,255,.25);
 
 }
 
+.topbar-bottom-line::before{
 
-/* =====================================================
-   SOCIAL ICONS
-===================================================== */
+    content:"";
 
-.topbar-socials {
+    position:absolute;
 
-  position: relative;
+    left:-40%;
 
-  z-index: 2;
+    width:40%;
 
-  display: flex;
+    height:100%;
 
-  align-items: center;
+    background:
 
-  gap: 9px;
+    linear-gradient(
+    90deg,
+    transparent,
+    #7fd6ff,
+    #ffffff,
+    #d4c7ff,
+    transparent);
 
-}
-
-
-.topbar-social {
-
-  width: 28px;
-
-  height: 28px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border: 1px solid #ded7e2;
-
-  border-radius: 50%;
-
-  color: #756b7d;
-
-  background:
-
-    rgba(
-      255,
-      255,
-      255,
-      0.48
-    );
-
-  text-decoration: none;
-
-  transition:
-
-    transform 0.35s ease,
-
-    color 0.35s ease,
-
-    background 0.35s ease,
-
-    box-shadow 0.35s ease;
+    animation:lineMove 5s linear infinite;
 
 }
 
+@keyframes lineMove{
 
-.topbar-social i {
+    100%{
 
-  font-size: 12px;
+        left:140%;
 
-}
-
-
-.topbar-social:hover {
-
-  transform:
-
-    translateY(
-      -4px
-    )
-
-    scale(
-      1.12
-    );
-
-  background: #ffffff;
-
-  box-shadow:
-
-    0 7px 18px
-
-    rgba(
-      60,
-      45,
-      75,
-      0.14
-    );
+    }
 
 }
 
+/* ===========================================================
+   HOVER TEXT EFFECT
+=========================================================== */
 
-.topbar-social.facebook:hover {
+.topbar-item:hover .text-box span{
 
-  color: #1877f2;
+    animation:
 
-  border-color: #1877f2;
-
-}
-
-
-.topbar-social.instagram:hover {
-
-  color: #d62976;
-
-  border-color: #d62976;
+    textFlow .8s linear infinite;
 
 }
 
+/* ===========================================================
+   RESPONSIVE
+=========================================================== */
 
-.topbar-social.youtube:hover {
+@media(max-width:1200px){
 
-  color: #ff0000;
+    .aurelia-topbar{
 
-  border-color: #ff0000;
+        padding:0 30px;
 
-}
+    }
 
+    .topbar-left{
 
-.topbar-social.whatsapp:hover {
+        gap:18px;
 
-  color: #25d366;
+    }
 
-  border-color: #25d366;
+    .text-box span{
 
-}
+        font-size:12px;
 
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media (max-width: 1200px) {
-
-  .aurelia-topbar {
-
-    padding: 0 25px;
-
-  }
-
-
-  .topbar-contact {
-
-    gap: 20px;
-
-  }
-
-
-  .topbar-item {
-
-    font-size: 11px;
-
-  }
+    }
 
 }
 
+@media(max-width:992px){
 
-/* =====================================================
-   MOBILE
-===================================================== */
+    .text-box small{
 
-@media (max-width: 900px) {
+        display:none;
 
-  .aurelia-topbar {
+    }
 
-    display: none;
+    .text-box span{
 
-  }
+        font-size:11px;
+
+    }
+
+    .icon-box{
+
+        width:32px;
+
+        height:32px;
+
+    }
+
+    .social-circle{
+
+        width:36px;
+
+        height:36px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .aurelia-topbar{
+
+        display:none;
+
+    }
+
+}
+
+/* ===========================================================
+   PREMIUM ENTRY ANIMATION
+=========================================================== */
+
+.aurelia-topbar{
+
+    animation:
+
+    topbarReveal
+
+    .9s ease;
+
+}
+.aurelia-topbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:48px;
+
+    z-index:1200;
+
+}
+
+@keyframes topbarReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(-30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
 
 }

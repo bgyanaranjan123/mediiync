@@ -1,132 +1,140 @@
 import React from "react";
 import "./TopBar.css";
 
-const TopBar = () => {
+function TopBar() {
   return (
-    <div className="aurelia-topbar">
+    <section className="aurelia-topbar">
 
-      {/* Animated Aura */}
+      {/* Animated Background */}
 
-      <div className="topbar-aura topbar-aura-left"></div>
-      <div className="topbar-aura topbar-aura-right"></div>
+      <div className="topbar-bg"></div>
 
+      <div className="topbar-noise"></div>
 
-      {/* Contact Information */}
+      <div className="topbar-aura aura-one"></div>
 
-      <div className="topbar-contact">
+      <div className="topbar-aura aura-two"></div>
+
+      <div className="topbar-light"></div>
+
+      {/* Left Side */}
+
+      <div className="topbar-left">
 
         <a
           href="https://www.google.com/maps/search/?api=1&query=Berhampur%2C%20Odisha"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
           className="topbar-item"
         >
 
-          <span className="topbar-icon">
-            <i className="fa-solid fa-location-dot"></i>
-          </span>
+          <div className="icon-box">
 
-          <span>
-            Berhampur, Odisha
-          </span>
+            <i className="fa-solid fa-location-dot"></i>
+
+          </div>
+
+          <div className="text-box">
+
+            <small>Location</small>
+
+            <span>Berhampur, Odisha</span>
+
+          </div>
 
         </a>
-
 
         <a
-          href="mailto:theeventwala.bam@gmail.com"
+          href="mailto:aureliaevents.bam@gmail.com"
           className="topbar-item"
         >
 
-          <span className="topbar-icon">
-            <i className="fa-solid fa-envelope"></i>
-          </span>
+          <div className="icon-box">
 
-          <span>
-            aureliaevents.bam@gmail.com
-          </span>
+            <i className="fa-solid fa-envelope"></i>
+
+          </div>
+
+          <div className="text-box">
+
+            <small>Email</small>
+
+            <span>aureliaevents.bam@gmail.com</span>
+
+          </div>
 
         </a>
-
 
         <div className="topbar-item">
 
-          <span className="topbar-icon">
-            <i className="fa-solid fa-phone"></i>
-          </span>
+          <div className="icon-box">
 
-          <span>
-            6372770370
-            <b> · </b>
-            8917357254
-            <b> · </b>
-            9668089696
-          </span>
+            <i className="fa-solid fa-phone"></i>
+
+          </div>
+
+          <div className="text-box">
+
+            <small>Contact</small>
+
+            <span>
+
+              +91 6372770370
+
+            </span>
+
+          </div>
 
         </div>
 
       </div>
 
+      {/* Right Side */}
 
-      {/* SOCIAL MEDIA */}
-
-      <div className="topbar-socials">
+      <div className="topbar-right">
 
         <a
-          href="https://www.facebook.com/"
+          href="https://facebook.com"
+          className="social-circle"
           target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-          className="topbar-social facebook"
+          rel="noreferrer"
         >
-
           <i className="fa-brands fa-facebook-f"></i>
-
         </a>
 
-
         <a
-          href="https://www.instagram.com/"
+          href="https://instagram.com"
+          className="social-circle"
           target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          className="topbar-social instagram"
+          rel="noreferrer"
         >
-
           <i className="fa-brands fa-instagram"></i>
-
         </a>
-
 
         <a
-          href="https://www.youtube.com/"
+          href="https://youtube.com"
+          className="social-circle"
           target="_blank"
-          rel="noopener noreferrer"
-          aria-label="YouTube"
-          className="topbar-social youtube"
+          rel="noreferrer"
         >
-
           <i className="fa-brands fa-youtube"></i>
-
         </a>
-
 
         <a
           href="https://wa.me/916372770370"
+          className="social-circle"
           target="_blank"
-          rel="noopener noreferrer"
-          aria-label="WhatsApp"
-          className="topbar-social whatsapp"
+          rel="noreferrer"
         >
-
           <i className="fa-brands fa-whatsapp"></i>
-
         </a>
 
       </div>
 
-    </div>
+      <div className="topbar-bottom-line"></div>
+
+    </section>
   );
-};
+}
 
 export default TopBar;
