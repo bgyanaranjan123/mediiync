@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import{Link}from"react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
@@ -58,10 +59,10 @@ function Navbar() {
 
       {/* BRAND */}
 
-      <a
-        href="#home"
-        className="aurelia-brand"
-        onClick={closeMenu}
+      <Link
+      to="/"
+      classname="aurelia-brand"
+      onclick={closeMenu}
       >
 
         <div className="brand-logo">
@@ -95,7 +96,7 @@ function Navbar() {
 
         </div>
 
-      </a>
+      </Link>
 
       {/* NAVIGATION */}
 
@@ -105,10 +106,10 @@ function Navbar() {
         }`}
       >
 
-        <a href="#home" onClick={closeMenu}>
+        <Link to="/" onClick={closeMenu}>
           <span>01</span>
           Home
-        </a>
+        </Link>
 
         <a href="#about" onClick={closeMenu}>
           <span>02</span>

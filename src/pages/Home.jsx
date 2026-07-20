@@ -1,6 +1,7 @@
 import TopBar from "../components/TopBar/TopBar.jsx";
 import Navbar from "../components/Navbar/NavBar.jsx";
 import Header from "../components/Header/Header.jsx";
+import About from "../components/About/About.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 
  function Home() {
@@ -9,6 +10,7 @@ import Footer from "../components/Footer/Footer.jsx";
       <TopBar />
       <Navbar />
       <Header />
+      <About />
       <Footer />
     </>
   );
