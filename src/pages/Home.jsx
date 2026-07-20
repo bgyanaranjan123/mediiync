@@ -4,7 +4,7 @@ import Header from "../components/Header/Header.jsx";
 import About from "../components/About/About.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 
- function Home() {
+function Home() {
   return (
     <>
       <TopBar />
@@ -15,4 +15,5 @@ import Footer from "../components/Footer/Footer.jsx";
     </>
   );
 }
+
 export default Home;

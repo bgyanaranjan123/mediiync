@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 import logo from "/src/assets/logo.jpeg";
@@ -141,7 +142,7 @@ function Footer() {
 
           <a href="#gallery">Gallery</a>
 
-          <a href="#team">Our Team</a>
+          <Link to="/team">Our Team</Link>
 
           <a href="#faq">FAQ</a>
 
