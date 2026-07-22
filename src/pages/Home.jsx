@@ -14,7 +14,7 @@ function Home() {
       <About />
       <Footer />
     </>
-  );
+  );  
 }
 
 export default Home;
