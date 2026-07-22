@@ -6,7 +6,7 @@ function About() {
     <section className="about-page" id="about">
 
       <div className="about-hero">
-        <h1>ABO,kjhgfdUT <strong>AURELIA</strong></h1>
+        <h1>ABOUT <strong>AURELIA</strong></h1>
 
         <p>
           Every celebration tells a story. At Aurelia, we transform ideas
