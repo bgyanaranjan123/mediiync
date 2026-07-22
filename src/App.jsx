@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Landingpage from "./pages/Landing Page/Landingpage.jsx";
-import Home from "./pages/Home";
+import Landingpage from "./pages/LandingPage/Landingpage.jsx";
+
 import About from "./components/About/About";
 import OurTeamPage from "./pages/OurTeamPage";
 import Header from "./components/Header/Header.jsx";
@@ -20,8 +20,9 @@ function App() {
       <Routes>
 
           <Route path="/" element={<Landingpage />} />
+            <Route path="/Landingpage" element={<Landingpage />} />
 
-        <Route path="/" element={<Home />} />
+       
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<OurTeamPage />} />
         <Route path="/Contact" element={<Contact />} /> 

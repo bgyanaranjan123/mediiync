@@ -1,11 +1,13 @@
 import React, { useEffect, useRef } from "react";
-import "../Header/Header.css";
+import "./Hero.css";
 
 const eventImages = Array.from(
   { length: 24 },
   (_, index) => `/src/assets/floating Images/images${index + 1}.jpg`
 );
 
+function Hero() {
+  const animationRef = useRef(null);
 
   useEffect(() => {
     const container = animationRef.current;
@@ -331,4 +333,4 @@ scale(${scale})
   );
 }
 
-export default Home;
+export default Hero;
