@@ -2,11 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./components/About/About";
 import OurTeamPage from "./pages/OurTeamPage";
-<<<<<<< HEAD
-=======
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
->>>>>>> 876cdad88efb7dfbe943350087eebb73b2026e68
 import Contact from "./components/Contact/Contact.jsx";         
 import Gallery from "./components/Gallery/Gallery";
 import GalleryDetails from "./components/Gallery/galleryDetail";

@@ -343,6 +343,7 @@ onChange={handleChange}
                 <div className="info-content">
                   <h4>Phone</h4>
                   <p>+91 6372770370</p>
+                  <p>+91 8917357254</p>
                 </div>
 
               </div>
@@ -389,7 +390,7 @@ onChange={handleChange}
               </a>
 
               <a
-                href="https://wa.me/916372770370"
+                href="https://wa.me/918917357254"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -413,14 +414,14 @@ onChange={handleChange}
 
       </div>
 
-      <a
-        href="https://wa.me/916372770370"
+      {/* <a
+        href="https://wa.me/918917357254"
         className="floating-whatsapp"
         target="_blank"
         rel="noreferrer"
       >
         <FaWhatsapp />
-      </a>
+      </a> */}
 
     </section>
 
