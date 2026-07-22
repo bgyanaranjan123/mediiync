@@ -1,0 +1,83 @@
+.services {
+  background: #0d1117;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.services h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.services h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: #00d4ff;
+  margin: 12px auto;
+  border-radius: 10px;
+}
+
+.subtitle {
+  color: #bdbdbd;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.book-btn {
+  padding: 14px 35px;
+  background: white;
+  color: #111;
+  border: none;
+  border-radius: 30px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: #00d4ff;
+  color: white;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  margin-top: 60px;
+}
+
+.card {
+  background: #161b22;
+  padding: 30px 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+}
+
+.icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #00d4ff;
+}
+
+.card p {
+  color: #d0d0d0;
+  line-height: 1.6;
+}
