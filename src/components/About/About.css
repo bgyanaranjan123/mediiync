@@ -1,0 +1,300 @@
+/* ==========================================
+   ABOUT PAGE
+========================================== */
+
+.about-page {
+  width: 100%;
+  background: #ffffff;
+  color: #1f2937;
+  overflow-x: hidden;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.about-hero {
+  text-align: center;
+  padding: 90px 20px 40px;
+}
+
+.about-hero h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #1d3557;
+  margin-bottom: 20px;
+}
+
+.about-hero h1 strong {
+  color: #8b5cf6;
+}
+
+.about-hero p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* ==========================================
+   ABOUT SECTION
+========================================== */
+
+.about-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 320px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 22px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0,0,0,.12);
+}
+
+.about-content {
+  flex: 1;
+  min-width: 320px;
+}
+
+.about-content h2 {
+  font-size: 42px;
+  color: #1d3557;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: #666;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+
+.about-content button {
+  margin-top: 10px;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 50px;
+  background: #1d3557;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .35s;
+}
+
+.about-content button:hover {
+  transform: translateY(-4px);
+  background: #8b5cf6;
+}
+
+/* ==========================================
+   DIVIDER SECTION
+========================================== */
+
+.about-divider {
+  width: 100%;
+  padding: 70px 20px;
+  background: linear-gradient(
+      135deg,
+      #f8fafc,
+      #eef4ff
+  );
+  text-align: center;
+}
+
+.about-divider h2 {
+  font-size: 40px;
+  color: #1d3557;
+  margin-bottom: 20px;
+}
+
+.about-divider p {
+  max-width: 800px;
+  margin: auto;
+  color: #666;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+/* ==========================================
+   WHY US
+========================================== */
+
+.why-us {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 70px auto 40px;
+
+  text-align: center;
+}
+
+.why-us h2 {
+  font-size: 46px;
+  color: #1d3557;
+  margin-bottom: 55px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 28px;
+}
+
+.why-card {
+  background: white;
+  padding: 35px 30px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.08);
+  transition: .35s;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.14);
+}
+
+.why-card h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #1d3557;
+}
+
+.why-card p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* ==========================================
+   REMOVE EXTRA GAP BEFORE FOOTER
+========================================== */
+
+footer {
+  margin-top: 0 !important;
+}
+
+.why-us:last-child {
+  margin-bottom: 0;
+  padding-bottom: 40px;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width:992px){
+
+.about-hero h1{
+font-size:48px;
+}
+
+.about-container{
+gap:40px;
+}
+
+.about-content h2{
+font-size:36px;
+}
+
+.why-us h2{
+font-size:38px;
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.about-hero{
+padding:80px 20px 30px;
+}
+
+.about-hero h1{
+font-size:40px;
+}
+
+.about-hero p{
+font-size:16px;
+}
+
+.about-container{
+flex-direction:column;
+text-align:center;
+margin-bottom:60px;
+}
+
+.about-content h2{
+font-size:32px;
+}
+
+.about-divider{
+padding:60px 20px;
+}
+
+.about-divider h2{
+font-size:30px;
+}
+
+.about-divider p{
+font-size:15px;
+}
+
+.why-us{
+margin:60px auto 30px;
+}
+
+.why-us h2{
+font-size:34px;
+margin-bottom:35px;
+}
+
+.why-grid{
+grid-template-columns:1fr;
+}
+
+.why-card{
+padding:28px 22px;
+}
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+.about-hero h1{
+font-size:32px;
+}
+
+.about-content h2{
+font-size:28px;
+}
+
+.why-us h2{
+font-size:28px;
+}
+
+.about-content button{
+width:100%;
+}
+
+}

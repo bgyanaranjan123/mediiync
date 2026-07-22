@@ -1,0 +1,798 @@
+/* ===========================================================
+                    AURELIA CONTACT PAGE
+=========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#06111d;
+    font-family:'Poppins',sans-serif;
+}
+
+.contact-page{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    padding:140px 70px 80px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #06111d,
+        #081b2b,
+        #0d2940,
+        #06111d);
+
+}
+
+/* ===========================================================
+                    PREMIUM BACKGROUND
+=========================================================== */
+
+.contact-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at top left,
+    rgba(0,255,255,.10),
+    transparent 40%),
+
+    radial-gradient(circle at bottom right,
+    rgba(138,98,255,.12),
+    transparent 45%),
+
+    radial-gradient(circle at center,
+    rgba(255,255,255,.03),
+    transparent 65%);
+
+    z-index:0;
+
+}
+
+/* ===========================================================
+                    FLOATING AURAS
+=========================================================== */
+
+.contact-aura{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    opacity:.55;
+
+}
+
+.aura1{
+
+    width:340px;
+
+    height:340px;
+
+    top:-100px;
+
+    left:-100px;
+
+    background:#00d9ff;
+
+    animation:auraOne 10s ease-in-out infinite alternate;
+
+}
+
+.aura2{
+
+    width:320px;
+
+    height:320px;
+
+    right:-100px;
+
+    bottom:-100px;
+
+    background:#8c6cff;
+
+    animation:auraTwo 11s ease-in-out infinite alternate;
+
+}
+
+@keyframes auraOne{
+
+    from{
+
+        transform:
+        translateX(-30px)
+        translateY(-20px)
+        scale(.95);
+
+    }
+
+    to{
+
+        transform:
+        translateX(60px)
+        translateY(35px)
+        scale(1.2);
+
+    }
+
+}
+
+@keyframes auraTwo{
+
+    from{
+
+        transform:
+        translateX(30px)
+        translateY(25px)
+        scale(.9);
+
+    }
+
+    to{
+
+        transform:
+        translateX(-50px)
+        translateY(-40px)
+        scale(1.18);
+
+    }
+
+}
+
+/* ===========================================================
+                    MOVING LIGHT
+=========================================================== */
+
+.contact-light{
+
+    position:absolute;
+
+    top:-60%;
+
+    left:-30%;
+
+    width:35%;
+
+    height:220%;
+
+    transform:rotate(18deg);
+
+    background:
+
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent);
+
+    animation:lightMove 10s linear infinite;
+
+}
+
+@keyframes lightMove{
+
+    100%{
+
+        left:150%;
+
+    }
+
+}
+
+/* ===========================================================
+                    CONTAINER
+=========================================================== */
+
+.contact-container{
+
+    position:relative;
+
+    z-index:5;
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+/* ===========================================================
+                    TITLE
+=========================================================== */
+
+.contact-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+    font-size:52px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #ffffff,
+        #89f2ff,
+        #ffffff);
+
+    background-size:220%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:titleFlow 6s linear infinite;
+
+}
+
+@keyframes titleFlow{
+
+    100%{
+
+        background-position:220%;
+
+    }
+
+}
+
+/* ===========================================================
+                    GRID
+=========================================================== */
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:1.3fr .8fr;
+
+    gap:45px;
+
+    align-items:start;
+
+}
+
+/* ===========================================================
+                    PREMIUM GLASS CARD
+=========================================================== */
+
+.contact-form-card,
+.contact-info-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+
+    0 25px 70px rgba(0,0,0,.35),
+
+    inset 0 1px 0 rgba(255,255,255,.08);
+
+    transition:.45s;
+
+}
+
+/* ===========================================================
+                    SHINE EFFECT
+=========================================================== */
+
+.contact-form-card::before,
+.contact-info-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-40%;
+
+    width:60%;
+
+    height:250%;
+
+    transform:rotate(20deg);
+
+    background:
+
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent);
+
+    transition:.8s;
+
+}
+
+.contact-form-card:hover::before,
+.contact-info-card:hover::before{
+
+    left:160%;
+
+}
+
+.contact-form-card:hover,
+.contact-info-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.45),
+
+    0 0 40px rgba(0,255,255,.12);
+
+}
+
+/* ===========================================================
+                    ENTRY ANIMATION
+=========================================================== */
+
+.contact-form-card{
+
+    animation:leftReveal .8s ease;
+
+}
+
+.contact-info-card{
+
+    animation:rightReveal .8s ease;
+
+}
+
+@keyframes leftReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes rightReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+/* ===========================================================
+                    FORM
+=========================================================== */
+
+.contact-form-card form{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+}
+
+/* ===========================================================
+                    INPUT GRID
+=========================================================== */
+
+.input-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+/* ===========================================================
+                    INPUTS
+=========================================================== */
+
+.input-grid input,
+.contact-form-card textarea,
+.captcha-area input{
+
+    width:100%;
+
+    padding:18px 22px;
+
+    border-radius:16px;
+
+    outline:none;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    background:rgba(255,255,255,.06);
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.35s;
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+}
+
+.input-grid input::placeholder,
+.contact-form-card textarea::placeholder,
+.captcha-area input::placeholder{
+
+    color:rgba(255,255,255,.55);
+
+    letter-spacing:.5px;
+
+}
+
+/* ===========================================================
+                    TEXTAREA
+=========================================================== */
+
+.contact-form-card textarea{
+
+    resize:none;
+
+    min-height:220px;
+
+    line-height:1.8;
+
+}
+
+/* ===========================================================
+                    INPUT HOVER
+=========================================================== */
+
+.input-grid input:hover,
+.contact-form-card textarea:hover,
+.captcha-area input:hover{
+
+    border-color:rgba(0,225,255,.35);
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================================================
+                    INPUT FOCUS
+=========================================================== */
+
+.input-grid input:focus,
+.contact-form-card textarea:focus,
+.captcha-area input:focus{
+
+    border-color:#18dfff;
+
+    background:rgba(255,255,255,.10);
+
+    box-shadow:
+
+    0 0 0 3px rgba(0,225,255,.12),
+
+    0 12px 30px rgba(0,225,255,.20);
+
+}
+
+/* ===========================================================
+                    CAPTCHA
+=========================================================== */
+
+.captcha-area{
+
+    display:grid;
+
+    grid-template-columns:170px 70px 1fr;
+
+    gap:18px;
+
+    align-items:center;
+
+}
+
+/* ===========================================================
+                    CAPTCHA BOX
+=========================================================== */
+
+.captcha-box{
+
+    height:58px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:16px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    letter-spacing:5px;
+
+    color:#00e5ff;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    rgba(255,255,255,.10),
+    rgba(255,255,255,.05));
+
+    border:1px solid rgba(0,225,255,.25);
+
+    user-select:none;
+
+    text-shadow:
+
+    0 0 18px rgba(0,225,255,.45);
+
+    box-shadow:
+
+    inset 0 0 20px rgba(0,225,255,.10),
+
+    0 10px 25px rgba(0,0,0,.25);
+
+}
+
+/* ===========================================================
+                    REFRESH BUTTON
+=========================================================== */
+
+.refresh-btn{
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:16px;
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #00d4ff,
+    #5d8dff);
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 15px 30px rgba(0,180,255,.25);
+
+}
+
+.refresh-btn:hover{
+
+    transform:
+
+    rotate(180deg)
+    scale(1.08);
+
+    box-shadow:
+
+    0 22px 45px rgba(0,180,255,.35);
+
+}
+
+.refresh-btn:active{
+
+    transform:scale(.95);
+
+}
+
+/* ===========================================================
+                    BUTTON WRAPPER
+=========================================================== */
+
+.button-wrapper{
+
+    display:flex;
+
+    justify-content:flex-start;
+
+    margin-top:10px;
+
+}
+
+/* ===========================================================
+                    SEND BUTTON
+=========================================================== */
+
+.send-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    width:240px;
+
+    height:60px;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    border-radius:18px;
+
+    color:#ffffff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #00d9ff,
+    #568fff);
+
+    transition:.4s;
+
+    box-shadow:
+
+    0 20px 45px rgba(0,210,255,.25);
+
+}
+
+.send-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    transform:skewX(-25deg);
+
+    background:
+
+    linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.65),
+    transparent);
+
+}
+
+.send-btn:hover::before{
+
+    left:180%;
+
+    transition:1s;
+
+}
+
+.send-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 28px 60px rgba(0,210,255,.35);
+
+}
+
+.send-btn:active{
+
+    transform:scale(.97);
+
+}
+
+.send-btn svg{
+
+    font-size:18px;
+
+}
+
+/* ===========================================================
+                    FORM FADE
+=========================================================== */
+
+.contact-form-card form{
+
+    animation:formFade .8s ease;
+
+}
+
+@keyframes formFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
