@@ -2,9 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./components/About/About";
 import OurTeamPage from "./pages/OurTeamPage";
-
 import Contact from "./components/Contact/Contact.jsx";         
-
 import Gallery from "./components/Gallery/Gallery";
 import GalleryDetails from "./components/Gallery/galleryDetail";
 import Services from "./components/Services/Services.jsx";
@@ -29,3 +27,4 @@ function App() {
 
 
 export default App;
+
