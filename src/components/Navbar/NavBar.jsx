@@ -53,7 +53,7 @@ function Navbar() {
           Home
         </Link>
 
-        <a href="#about" onClick={closeMenu}>
+        <a href="/about" onClick={closeMenu}>
           <span>02</span>
           About
         </a>
