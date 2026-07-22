@@ -67,6 +67,7 @@ function Navbar() {
           <span>04</span>
           Gallery
         </a>
+        
 
         <Link to="/team" onClick={closeMenu}>
           <span>05</span>

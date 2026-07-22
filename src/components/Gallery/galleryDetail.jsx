@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import "./Gallery.css";
 
+
 import image1 from "../../assets/floating Images/images1.jpg";
 import image2 from "../../assets/floating Images/images2.jpg";
 import image3 from "../../assets/floating Images/images3.jpg";
@@ -48,7 +49,7 @@ function GalleryDetails() {
             <span>Luxury Decor</span>
             <span>Memorable Moments</span>
           </div>
-          <Link className="gallery-back-link" to="/gallery">
+          <Link className="gallery-back-link" to="/Gallery">
             ← Back to Gallery
           </Link>
         </div>
