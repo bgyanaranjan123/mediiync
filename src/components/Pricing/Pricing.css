@@ -1,205 +1,136 @@
 /* ==========================================================
-   SERVICES SECTION
+   PRICING SECTION
 ========================================================== */
 
-.services{
-
+.pricing{
     position:relative;
-
     overflow:hidden;
-
     padding:140px 0;
-
     background:
     linear-gradient(
     180deg,
     #ffffff,
-    #fbf8ff 45%,
-    #f5fbff);
-
+    #faf8ff 45%,
+    #f4fbff);
     isolation:isolate;
-
 }
 
 /* ==========================================================
    BACKGROUND GLOW
 ========================================================== */
 
-.service-glow{
-
+.pricingGlow{
     position:absolute;
-
     border-radius:50%;
-
     filter:blur(140px);
-
-    opacity:.28;
-
+    opacity:.22;
     pointer-events:none;
-
-    animation:serviceGlow 12s ease-in-out infinite alternate;
-
+    animation:pricingGlow 12s ease-in-out infinite alternate;
 }
 
-.glow-left{
-
+.glowLeft{
     width:480px;
-
     height:480px;
-
-    background:#d7c4ff;
-
+    background:#d7c5ff;
     top:-180px;
-
     left:-180px;
-
 }
 
-.glow-right{
-
-    width:420px;
-
-    height:420px;
-
+.glowRight{
+    width:430px;
+    height:430px;
     background:#bdeaff;
-
     right:-160px;
-
     bottom:-120px;
-
 }
 
 /* ==========================================================
    CONTAINER
 ========================================================== */
 
-.services-container{
-
+.pricingContainer{
     width:min(1320px,92%);
-
     margin:auto;
-
     position:relative;
-
     z-index:5;
-
 }
 
 /* ==========================================================
    HEADING
 ========================================================== */
 
-.services-heading{
-
+.pricingHeading{
     text-align:center;
-
     max-width:760px;
-
     margin:auto;
-
-    margin-bottom:80px;
-
+    margin-bottom:90px;
 }
 
-.services-heading span{
-
-    display:inline-block;
-
+.pricingHeading span{
+    display:inline-flex;
     padding:10px 24px;
-
-    border-radius:40px;
-
-    background:#fff;
-
-    color:#7f6dff;
-
-    letter-spacing:2px;
-
+    border-radius:50px;
+    background:white;
+    color:#7c68ff;
     font-size:13px;
-
+    letter-spacing:2px;
     font-weight:600;
-
-    box-shadow:
-    0 15px 35px rgba(0,0,0,.05);
-
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
 }
 
-.services-heading h2{
-
+.pricingHeading h2{
     margin-top:28px;
-
     font-size:64px;
-
-    line-height:1.15;
-
+    line-height:1.1;
     font-family:Georgia,serif;
-
     font-weight:500;
-
-    color:#2e2638;
-
+    color:#2d2435;
 }
 
-.services-heading h2 strong{
-
+.pricingHeading strong{
     display:block;
-
+    margin-top:12px;
     background:
     linear-gradient(
     90deg,
-    #7f6dff,
-    #57cfff);
+    #7d67ff,
+    #56cfff);
 
     -webkit-background-clip:text;
-
     -webkit-text-fill-color:transparent;
-
 }
 
-.services-heading p{
-
+.pricingHeading p{
     margin-top:28px;
-
-    color:#6f6977;
-
-    font-size:18px;
-
+    color:#6d6875;
     line-height:2;
-
+    font-size:18px;
 }
 
 /* ==========================================================
    GRID
 ========================================================== */
 
-.services-grid{
-
+.pricingGrid{
     display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:34px;
-
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
 }
 
 /* ==========================================================
    CARD
 ========================================================== */
 
-.service-card{
-
+.priceCard{
     position:relative;
-
     overflow:hidden;
-
+    padding:45px 40px;
     border-radius:34px;
 
     background:
     rgba(255,255,255,.72);
 
     backdrop-filter:blur(28px);
-
     -webkit-backdrop-filter:blur(28px);
 
     border:1px solid rgba(255,255,255,.92);
@@ -207,157 +138,140 @@
     transition:.45s;
 
     box-shadow:
-
-    0 25px 60px rgba(40,40,40,.08),
-
-    inset 0 0 25px rgba(255,255,255,.55);
+    0 25px 60px rgba(40,40,40,.08);
 
 }
 
-.service-card:hover{
-
+.priceCard:hover{
     transform:
     translateY(-12px);
 
     box-shadow:
-
     0 45px 80px rgba(40,40,40,.12);
-
 }
 
 /* ==========================================================
-   IMAGE
+   FEATURED CARD
 ========================================================== */
 
-.service-image{
+.featured{
 
-    position:relative;
-
-    height:280px;
-
-    overflow:hidden;
-
-}
-
-.service-image img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    transition:1s;
-
-}
-
-.service-card:hover img{
-
-    transform:scale(1.08);
-
-}
-
-.service-image::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
+    transform:scale(1.05);
 
     background:
-
     linear-gradient(
+    145deg,
+    rgba(255,255,255,.92),
+    rgba(245,249,255,.82));
 
-    to top,
-
-    rgba(20,20,20,.30),
-
-    transparent 70%);
+    border:2px solid rgba(123,104,255,.18);
 
 }
 
-/* ==========================================================
-   NUMBER
-========================================================== */
-
-.service-number{
+.popular{
 
     position:absolute;
 
-    top:22px;
+    top:25px;
 
-    right:22px;
+    right:-45px;
 
-    width:60px;
+    width:180px;
 
-    height:60px;
+    text-align:center;
 
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
+    padding:10px;
 
     background:
+    linear-gradient(
+    90deg,
+    #7d67ff,
+    #59cfff);
 
-    rgba(255,255,255,.85);
+    color:white;
 
-    backdrop-filter:blur(16px);
-
-    color:#2f2737;
-
-    font-size:20px;
+    font-size:12px;
 
     font-weight:700;
 
-    box-shadow:
-    0 10px 30px rgba(0,0,0,.12);
+    letter-spacing:1px;
+
+    transform:rotate(45deg);
 
 }
+
 /* ==========================================================
-   SERVICE CONTENT
+   PRICE
 ========================================================== */
 
-.service-content{
+.priceCard h3{
 
-    padding:34px;
+    font-size:30px;
 
-    position:relative;
-
-}
-
-.service-content h3{
-
-    font-size:28px;
-
-    color:#2d2433;
+    color:#2d2434;
 
     margin-bottom:18px;
 
+}
+
+.priceCard h1{
+
+    font-size:64px;
+
+    color:#7d67ff;
+
+    margin-bottom:10px;
+
     font-family:Georgia,serif;
 
-    transition:.35s;
+}
+
+.packageTag{
+
+    display:inline-block;
+
+    margin-bottom:35px;
+
+    color:#8b8694;
+
+    font-size:15px;
+
+}
+/* ==========================================================
+   FEATURES LIST
+========================================================== */
+
+.priceCard ul{
+
+    list-style:none;
+
+    margin:35px 0;
+
+    padding:0;
 
 }
 
-.service-card:hover h3{
+.priceCard li{
 
-    color:#7a63ff;
+    display:flex;
 
-}
+    align-items:center;
 
-.service-content p{
+    gap:12px;
 
-    color:#6f6978;
+    padding:14px 0;
 
-    line-height:1.9;
+    border-bottom:1px solid rgba(0,0,0,.06);
+
+    color:#5f5b67;
 
     font-size:16px;
 
-    margin-bottom:32px;
+}
+
+.priceCard li:last-child{
+
+    border:none;
 
 }
 
@@ -365,46 +279,51 @@
    BUTTON
 ========================================================== */
 
-.service-content button{
+.priceCard button{
 
-    position:relative;
+    width:100%;
 
-    overflow:hidden;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:18px;
 
     border:none;
 
     cursor:pointer;
 
-    display:flex;
-
-    align-items:center;
-
-    gap:18px;
-
-    padding:16px 30px;
-
     border-radius:60px;
 
-    background:
-    linear-gradient(
-    135deg,
-    #2f2737,
-    #4d3e63);
-
-    color:white;
-
-    font-size:15px;
+    font-size:16px;
 
     font-weight:600;
 
+    color:white;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #2d2435,
+    #4c3d61);
+
     transition:.45s;
 
+    overflow:hidden;
+
+    position:relative;
+
     box-shadow:
-    0 18px 40px rgba(30,30,30,.14);
+    0 18px 40px rgba(30,30,30,.12);
 
 }
 
-.service-content button::before{
+.priceCard button::before{
 
     content:"";
 
@@ -419,39 +338,40 @@
     height:100%;
 
     background:
+
     linear-gradient(
     90deg,
     transparent,
     rgba(255,255,255,.35),
     transparent);
 
-    transition:.8s;
+    transition:.9s;
 
 }
 
-.service-content button:hover::before{
+.priceCard button:hover::before{
 
-    left:130%;
-
-}
-
-.service-content button:hover{
-
-    transform:translateY(-5px);
+    left:140%;
 
 }
 
-.service-content button span{
+.priceCard button:hover{
 
-    width:38px;
+    transform:translateY(-4px);
 
-    height:38px;
+}
+
+.priceCard button span{
+
+    width:36px;
+
+    height:36px;
 
     border-radius:50%;
 
     background:white;
 
-    color:#2f2737;
+    color:#2d2435;
 
     display:flex;
 
@@ -459,11 +379,11 @@
 
     align-items:center;
 
-    transition:.35s;
+    transition:.4s;
 
 }
 
-.service-content button:hover span{
+.priceCard button:hover span{
 
     transform:rotate(45deg);
 
@@ -473,7 +393,7 @@
    GLASS SHINE
 ========================================================== */
 
-.service-card::before{
+.priceCard::before{
 
     content:"";
 
@@ -482,6 +402,7 @@
     inset:0;
 
     background:
+
     linear-gradient(
     120deg,
     transparent,
@@ -492,35 +413,39 @@
 
     transition:1s;
 
-    z-index:2;
-
     pointer-events:none;
 
 }
 
-.service-card:hover::before{
+.priceCard:hover::before{
 
     transform:translateX(150%);
 
 }
 
 /* ==========================================================
-   IMAGE FLOAT
+   FLOATING
 ========================================================== */
 
-.service-card:nth-child(odd){
+.priceCard:nth-child(1){
 
-    animation:serviceFloatOne 8s ease-in-out infinite;
-
-}
-
-.service-card:nth-child(even){
-
-    animation:serviceFloatTwo 9s ease-in-out infinite;
+    animation:priceFloatOne 8s ease-in-out infinite;
 
 }
 
-@keyframes serviceFloatOne{
+.priceCard:nth-child(2){
+
+    animation:priceFloatTwo 9s ease-in-out infinite;
+
+}
+
+.priceCard:nth-child(3){
+
+    animation:priceFloatOne 10s ease-in-out infinite;
+
+}
+
+@keyframes priceFloatOne{
 
     0%{
 
@@ -530,7 +455,7 @@
 
     50%{
 
-        transform:translateY(-8px);
+        transform:translateY(-10px);
 
     }
 
@@ -542,29 +467,29 @@
 
 }
 
-@keyframes serviceFloatTwo{
+@keyframes priceFloatTwo{
 
     0%{
 
-        transform:translateY(0);
+        transform:translateY(0) scale(1.05);
 
     }
 
     50%{
 
-        transform:translateY(8px);
+        transform:translateY(10px) scale(1.05);
 
     }
 
     100%{
 
-        transform:translateY(0);
+        transform:translateY(0) scale(1.05);
 
     }
 
 }
 
-@keyframes serviceGlow{
+@keyframes pricingGlow{
 
     from{
 
@@ -578,9 +503,23 @@
 
         transform:
         translate(60px,-40px)
-        scale(1.2);
+        scale(1.18);
 
     }
+
+}
+
+/* ==========================================================
+   FEATURED HOVER
+========================================================== */
+
+.featured:hover{
+
+    border-color:#7d67ff;
+
+    box-shadow:
+
+    0 50px 100px rgba(123,104,255,.18);
 
 }
 
@@ -590,13 +529,19 @@
 
 @media(max-width:1100px){
 
-.services-grid{
+.pricingGrid{
 
 grid-template-columns:repeat(2,1fr);
 
 }
 
-.services-heading h2{
+.featured{
+
+transform:none;
+
+}
+
+.pricingHeading h2{
 
 font-size:52px;
 
@@ -606,53 +551,47 @@ font-size:52px;
 
 @media(max-width:768px){
 
-.services{
+.pricing{
 
 padding:90px 0;
 
 }
 
-.services-grid{
+.pricingGrid{
 
 grid-template-columns:1fr;
 
-gap:28px;
+gap:30px;
 
 }
 
-.services-heading{
+.pricingHeading{
 
-margin-bottom:55px;
-
-}
-
-.services-heading h2{
-
-font-size:40px;
+margin-bottom:60px;
 
 }
 
-.services-heading p{
+.pricingHeading h2{
+
+font-size:42px;
+
+}
+
+.pricingHeading p{
 
 font-size:16px;
 
 }
 
-.service-image{
+.priceCard{
 
-height:240px;
-
-}
-
-.service-content{
-
-padding:26px;
+padding:35px;
 
 }
 
-.service-content h3{
+.priceCard h1{
 
-font-size:24px;
+font-size:54px;
 
 }
 
@@ -660,13 +599,13 @@ font-size:24px;
 
 @media(max-width:500px){
 
-.services-container{
+.pricingContainer{
 
 width:94%;
 
 }
 
-.services-heading span{
+.pricingHeading span{
 
 font-size:11px;
 
@@ -676,31 +615,33 @@ padding:8px 18px;
 
 }
 
-.services-heading h2{
+.pricingHeading h2{
 
-font-size:32px;
-
-}
-
-.service-image{
-
-height:210px;
+font-size:34px;
 
 }
 
-.service-content button{
+.priceCard{
 
-width:100%;
-
-justify-content:center;
+padding:28px;
 
 }
 
-.service-content button span{
+.priceCard h3{
 
-width:34px;
+font-size:26px;
 
-height:34px;
+}
+
+.priceCard h1{
+
+font-size:46px;
+
+}
+
+.priceCard li{
+
+font-size:15px;
 
 }
 

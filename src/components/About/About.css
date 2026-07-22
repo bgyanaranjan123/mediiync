@@ -1,0 +1,758 @@
+/* ==========================================================
+   ABOUT SECTION
+========================================================== */
+
+.about{
+    position:relative;
+    overflow:hidden;
+    padding:140px 0;
+    background:
+    radial-gradient(circle at top left,#ffffff 0%,#faf7ff 40%,#f6fbff 100%);
+    isolation:isolate;
+}
+
+.about-container{
+    width:min(1320px,92%);
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+    align-items:center;
+    position:relative;
+    z-index:5;
+}
+
+/* ==========================================================
+   BACKGROUND GLOW
+========================================================== */
+
+.about-bg-circle{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.28;
+    animation:floatGlow 12s ease-in-out infinite alternate;
+    pointer-events:none;
+}
+
+.circle1{
+    width:420px;
+    height:420px;
+    background:#d9c5ff;
+    left:-180px;
+    top:-120px;
+}
+
+.circle2{
+    width:380px;
+    height:380px;
+    background:#bfe7ff;
+    right:-150px;
+    bottom:-100px;
+}
+
+.circle3{
+    width:250px;
+    height:250px;
+    background:#ffe8cf;
+    left:45%;
+    top:55%;
+}
+
+/* ==========================================================
+   IMAGES
+========================================================== */
+
+.about-images{
+    position:relative;
+    min-height:720px;
+}
+
+.image-card{
+    position:absolute;
+    overflow:hidden;
+    border-radius:36px;
+    background:rgba(255,255,255,.72);
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+    border:1px solid rgba(255,255,255,.9);
+    box-shadow:
+    0 30px 70px rgba(34,34,34,.08),
+    inset 0 0 25px rgba(255,255,255,.55);
+    transition:.6s;
+}
+
+.image-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:1s;
+}
+
+.image-card:hover img{
+    transform:scale(1.08);
+}
+
+.main-image{
+    width:470px;
+    height:600px;
+    left:0;
+    top:0;
+}
+
+.floating-image{
+    width:260px;
+    height:320px;
+    right:0;
+    bottom:40px;
+}
+
+/* ==========================================================
+   EXPERIENCE CARD
+========================================================== */
+
+.experience-card{
+    position:absolute;
+    left:35px;
+    bottom:40px;
+
+    width:240px;
+
+    padding:28px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.78);
+
+    backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.95);
+
+    box-shadow:
+    0 25px 60px rgba(20,20,20,.08);
+
+    animation:cardFloat 6s ease-in-out infinite;
+}
+
+.experience-card h2{
+    font-size:54px;
+    color:#2f2737;
+    margin-bottom:10px;
+}
+
+.experience-card span{
+    color:#6b6672;
+    line-height:1.8;
+    font-size:15px;
+}
+
+/* ==========================================================
+   RIGHT CONTENT
+========================================================== */
+
+.about-content{
+    position:relative;
+}
+
+.section-tag{
+
+    display:inline-flex;
+
+    padding:10px 24px;
+
+    border-radius:50px;
+
+    background:#ffffff;
+
+    color:#8464ff;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    font-size:13px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+
+    margin-bottom:30px;
+
+}
+
+.about-content h2{
+
+    font-size:62px;
+
+    line-height:1.15;
+
+    color:#2d2433;
+
+    font-family:Georgia,serif;
+
+    font-weight:500;
+
+}
+
+.about-content h2 span{
+
+    background:linear-gradient(
+    90deg,
+    #7d67ff,
+    #57c7ff);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.about-content>p{
+
+    margin:35px 0;
+
+    color:#6f6978;
+
+    line-height:2;
+
+    font-size:18px;
+
+    max-width:640px;
+
+}
+/* ==========================================================
+   FEATURES
+========================================================== */
+
+.about-features{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+    margin-top:45px;
+}
+
+.feature{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:22px;
+
+    padding:26px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(24px);
+    -webkit-backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.95);
+
+    overflow:hidden;
+
+    transition:.45s;
+
+    box-shadow:
+    0 20px 45px rgba(40,40,40,.06);
+
+}
+
+.feature::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.55),
+    transparent);
+
+    transform:translateX(-140%);
+
+    transition:1.1s;
+
+}
+
+.feature:hover::before{
+
+    transform:translateX(150%);
+
+}
+
+.feature:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 35px 70px rgba(45,45,45,.10);
+
+}
+
+.icon{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#fff;
+
+    background:
+    linear-gradient(135deg,#8d6dff,#59cfff);
+
+    flex-shrink:0;
+
+    box-shadow:
+    0 12px 30px rgba(113,125,255,.28);
+
+}
+
+.feature h4{
+
+    color:#2f2737;
+
+    font-size:21px;
+
+    margin-bottom:8px;
+
+}
+
+.feature p{
+
+    color:#6d6875;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.about-btn{
+
+    margin-top:48px;
+
+    border:none;
+
+    cursor:pointer;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px 36px;
+
+    border-radius:60px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #2f2737,
+    #4e3d63);
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.45s;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:
+    0 22px 45px rgba(40,30,60,.18);
+
+}
+
+.about-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:120%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.35),
+    transparent);
+
+    transition:.9s;
+
+}
+
+.about-btn:hover::before{
+
+    left:140%;
+
+}
+
+.about-btn:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.about-btn span{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#2f2737;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.4s;
+
+}
+
+.about-btn:hover span{
+
+    transform:rotate(45deg);
+
+}
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes floatGlow{
+
+    from{
+
+        transform:
+        translate(0,0)
+        scale(.92);
+
+    }
+
+    to{
+
+        transform:
+        translate(40px,-30px)
+        scale(1.15);
+
+    }
+
+}
+
+@keyframes cardFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Floating Images */
+
+.main-image{
+
+    animation:
+    imageFloatOne 7s ease-in-out infinite;
+
+}
+
+.floating-image{
+
+    animation:
+    imageFloatTwo 6s ease-in-out infinite;
+
+}
+
+@keyframes imageFloatOne{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes imageFloatTwo{
+
+    0%{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-15px)
+        rotate(2deg);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+    }
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1100px){
+
+.about-container{
+
+grid-template-columns:1fr;
+
+gap:80px;
+
+}
+
+.about-images{
+
+height:650px;
+
+max-width:650px;
+
+margin:auto;
+
+}
+
+.about-content{
+
+text-align:center;
+
+}
+
+.about-content>p{
+
+margin:auto;
+margin-top:30px;
+
+}
+
+.about-features{
+
+text-align:left;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.about{
+
+padding:90px 0;
+
+}
+
+.about-images{
+
+height:520px;
+
+min-height:auto;
+
+}
+
+.main-image{
+
+width:300px;
+
+height:400px;
+
+}
+
+.floating-image{
+
+width:180px;
+
+height:220px;
+
+}
+
+.experience-card{
+
+width:180px;
+
+padding:18px;
+
+}
+
+.experience-card h2{
+
+font-size:38px;
+
+}
+
+.about-content h2{
+
+font-size:42px;
+
+}
+
+.about-content>p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+.feature{
+
+padding:20px;
+
+}
+
+.icon{
+
+width:50px;
+
+height:50px;
+
+font-size:18px;
+
+}
+
+}
+
+@media(max-width:550px){
+
+.about-container{
+
+width:94%;
+
+}
+
+.about-images{
+
+height:420px;
+
+}
+
+.main-image{
+
+width:230px;
+
+height:320px;
+
+}
+
+.floating-image{
+
+width:140px;
+
+height:180px;
+
+right:10px;
+
+}
+
+.experience-card{
+
+left:0;
+
+bottom:0;
+
+width:160px;
+
+}
+
+.about-content h2{
+
+font-size:34px;
+
+}
+
+.section-tag{
+
+font-size:11px;
+
+letter-spacing:1px;
+
+padding:8px 16px;
+
+}
+
+.about-btn{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+}

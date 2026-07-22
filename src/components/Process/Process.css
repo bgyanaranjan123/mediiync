@@ -1,0 +1,488 @@
+/* ==========================================================
+   PROCESS SECTION
+========================================================== */
+
+.process{
+    position:relative;
+    overflow:hidden;
+    padding:140px 0;
+    background:
+    linear-gradient(
+    180deg,
+    #ffffff,
+    #fbf9ff 45%,
+    #f5fbff);
+    isolation:isolate;
+}
+
+/* ==========================================================
+   BACKGROUND GLOW
+========================================================== */
+
+.processGlow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(140px);
+    opacity:.25;
+    pointer-events:none;
+    animation:processGlow 12s ease-in-out infinite alternate;
+}
+
+.glowOne{
+    width:460px;
+    height:460px;
+    background:#d8c8ff;
+    top:-180px;
+    left:-180px;
+}
+
+.glowTwo{
+    width:420px;
+    height:420px;
+    background:#bce9ff;
+    right:-160px;
+    bottom:-120px;
+}
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.processContainer{
+    width:min(1320px,92%);
+    margin:auto;
+    position:relative;
+    z-index:5;
+}
+
+/* ==========================================================
+   HEADING
+========================================================== */
+
+.processHeading{
+    text-align:center;
+    max-width:760px;
+    margin:auto;
+    margin-bottom:90px;
+}
+
+.processHeading span{
+    display:inline-flex;
+    padding:10px 24px;
+    border-radius:40px;
+    background:#fff;
+    color:#7a66ff;
+    font-size:13px;
+    letter-spacing:2px;
+    font-weight:600;
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+}
+
+.processHeading h2{
+    margin-top:28px;
+    font-size:62px;
+    line-height:1.1;
+    font-family:Georgia,serif;
+    font-weight:500;
+    color:#2d2434;
+}
+
+.processHeading strong{
+    display:block;
+    margin-top:12px;
+    background:
+    linear-gradient(
+    90deg,
+    #7d67ff,
+    #57cfff);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.processHeading p{
+    margin-top:28px;
+    color:#6d6876;
+    line-height:2;
+    font-size:18px;
+}
+
+/* ==========================================================
+   TIMELINE
+========================================================== */
+
+.timeline{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.timelineLine{
+    position:absolute;
+    top:46px;
+    left:8%;
+    width:84%;
+    height:4px;
+    border-radius:50px;
+    background:
+    linear-gradient(
+    90deg,
+    #7b68ff,
+    #5fcfff);
+}
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.timelineCard{
+
+    position:relative;
+
+    text-align:center;
+
+    padding:80px 30px 40px;
+
+    border-radius:30px;
+
+    background:
+    rgba(255,255,255,.72);
+
+    backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.9);
+
+    transition:.45s;
+
+    box-shadow:
+    0 20px 50px rgba(40,40,40,.08);
+
+}
+
+.timelineCard:hover{
+
+    transform:
+    translateY(-12px);
+
+}
+
+/* ==========================================================
+   CIRCLE
+========================================================== */
+
+.timelineCircle{
+
+    position:absolute;
+
+    top:-18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:92px;
+
+    height:92px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:white;
+
+    background:
+    linear-gradient(
+    135deg,
+    #836eff,
+    #5acfff);
+
+    box-shadow:
+    0 18px 45px rgba(90,110,255,.35);
+
+}
+
+.timelineCard h3{
+
+    font-size:28px;
+
+    color:#2d2435;
+
+    margin-bottom:20px;
+
+}
+
+.timelineCard p{
+
+    color:#6d6875;
+
+    line-height:1.9;
+
+}
+/* ==========================================================
+   GLASS SHINE
+========================================================== */
+
+.timelineCard::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,.35),
+transparent);
+
+transform:translateX(-150%);
+
+transition:1s;
+
+pointer-events:none;
+
+}
+
+.timelineCard:hover::before{
+
+transform:translateX(150%);
+
+}
+
+/* ==========================================================
+   FLOATING
+========================================================== */
+
+.timelineCard:nth-child(2){
+
+animation:floatOne 8s ease-in-out infinite;
+
+}
+
+.timelineCard:nth-child(3){
+
+animation:floatTwo 9s ease-in-out infinite;
+
+}
+
+.timelineCard:nth-child(4){
+
+animation:floatOne 7s ease-in-out infinite;
+
+}
+
+.timelineCard:nth-child(5){
+
+animation:floatTwo 10s ease-in-out infinite;
+
+}
+
+@keyframes floatOne{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes floatTwo{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes processGlow{
+
+from{
+
+transform:
+translate(0,0)
+scale(.9);
+
+}
+
+to{
+
+transform:
+translate(60px,-40px)
+scale(1.15);
+
+}
+
+}
+
+/* ==========================================================
+   CIRCLE HOVER
+========================================================== */
+
+.timelineCircle{
+
+transition:.6s;
+
+}
+
+.timelineCard:hover .timelineCircle{
+
+transform:
+translateX(-50%)
+rotate(360deg)
+scale(1.08);
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1100px){
+
+.timeline{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.timelineLine{
+
+display:none;
+
+}
+
+.processHeading h2{
+
+font-size:50px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.process{
+
+padding:90px 0;
+
+}
+
+.timeline{
+
+grid-template-columns:1fr;
+
+gap:60px;
+
+}
+
+.processHeading{
+
+margin-bottom:60px;
+
+}
+
+.processHeading h2{
+
+font-size:40px;
+
+}
+
+.processHeading p{
+
+font-size:16px;
+
+}
+
+.timelineCard{
+
+padding:75px 25px 35px;
+
+}
+
+.timelineCircle{
+
+width:80px;
+
+height:80px;
+
+font-size:20px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.processContainer{
+
+width:94%;
+
+}
+
+.processHeading span{
+
+font-size:11px;
+
+letter-spacing:1px;
+
+padding:8px 18px;
+
+}
+
+.processHeading h2{
+
+font-size:32px;
+
+}
+
+.timelineCard h3{
+
+font-size:24px;
+
+}
+
+.timelineCard{
+
+padding:70px 20px 30px;
+
+}
+
+}

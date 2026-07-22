@@ -1,0 +1,754 @@
+/* ==========================================================
+   WHY CHOOSE US
+========================================================== */
+
+.why{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:140px 0;
+
+    background:
+    radial-gradient(circle at top,#ffffff,#faf7ff 45%,#f4fbff);
+
+    isolation:isolate;
+
+}
+
+/* ==========================================================
+   BACKGROUND GLOW
+========================================================== */
+
+.whyGlow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(140px);
+
+    opacity:.22;
+
+    animation:whyGlowMove 12s ease-in-out infinite alternate;
+
+}
+
+.glow1{
+
+    width:500px;
+
+    height:500px;
+
+    background:#d5c6ff;
+
+    top:-180px;
+
+    left:-180px;
+
+}
+
+.glow2{
+
+    width:420px;
+
+    height:420px;
+
+    background:#bfe9ff;
+
+    right:-150px;
+
+    bottom:-120px;
+
+}
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.whyContainer{
+
+    width:min(1320px,92%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/* ==========================================================
+   LEFT
+========================================================== */
+
+.whyLeft span{
+
+    display:inline-flex;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:#7b67ff;
+
+    letter-spacing:2px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    box-shadow:
+    0 12px 35px rgba(0,0,0,.06);
+
+}
+
+.whyLeft h2{
+
+    margin-top:28px;
+
+    font-size:62px;
+
+    line-height:1.15;
+
+    font-family:Georgia,serif;
+
+    font-weight:500;
+
+    color:#2d2535;
+
+}
+
+.whyLeft h2 strong{
+
+    display:block;
+
+    margin-top:10px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #7b67ff,
+    #53c9ff);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.whyLeft>p{
+
+    margin-top:35px;
+
+    color:#6d6875;
+
+    line-height:2;
+
+    font-size:18px;
+
+}
+
+/* ==========================================================
+   STATS
+========================================================== */
+
+.statsGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+    margin-top:45px;
+
+}
+
+.statCard{
+
+    padding:30px;
+
+    border-radius:28px;
+
+    background:
+    rgba(255,255,255,.72);
+
+    backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.9);
+
+    box-shadow:
+    0 20px 45px rgba(40,40,40,.07);
+
+    transition:.4s;
+
+}
+
+.statCard:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.statCard h3{
+
+    font-size:46px;
+
+    color:#2f2737;
+
+    margin-bottom:10px;
+
+}
+
+.statCard p{
+
+    color:#6d6878;
+
+}
+
+/* ==========================================================
+   RIGHT IMAGE
+========================================================== */
+
+.whyImage{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:36px;
+
+    height:520px;
+
+    margin-bottom:35px;
+
+    background:white;
+
+    padding:10px;
+
+    box-shadow:
+    0 30px 70px rgba(40,40,40,.08);
+
+}
+
+.whyImage img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:28px;
+
+    transition:1s;
+
+}
+
+.whyImage:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================================
+   FEATURE GRID
+========================================================== */
+
+.featureGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+.featureCard{
+
+    position:relative;
+
+    padding:28px;
+
+    overflow:hidden;
+
+    border-radius:26px;
+
+    background:
+    rgba(255,255,255,.75);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.9);
+
+    box-shadow:
+    0 18px 45px rgba(40,40,40,.06);
+
+    transition:.45s;
+
+}
+
+.featureCard:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 35px 70px rgba(40,40,40,.12);
+
+}
+
+.featureNumber{
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #836dff,
+    #56cfff);
+
+    color:white;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.featureCard h3{
+
+    color:#2d2434;
+
+    font-size:22px;
+
+    margin-bottom:14px;
+
+}
+
+.featureCard p{
+
+    color:#6c6874;
+
+    line-height:1.8;
+
+}
+/* ==========================================================
+   GLASS SHINE EFFECT
+========================================================== */
+
+.featureCard::before,
+.statCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.35),
+    transparent);
+
+    transform:translateX(-150%);
+
+    transition:1s;
+
+    pointer-events:none;
+
+}
+
+.featureCard:hover::before,
+.statCard:hover::before{
+
+    transform:translateX(150%);
+
+}
+
+/* ==========================================================
+   IMAGE BORDER GLOW
+========================================================== */
+
+.whyImage::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-3px;
+
+    border-radius:38px;
+
+    background:
+    linear-gradient(
+    135deg,
+    rgba(130,105,255,.35),
+    rgba(90,210,255,.25),
+    rgba(255,255,255,.6));
+
+    filter:blur(8px);
+
+    z-index:-1;
+
+}
+
+/* ==========================================================
+   FLOATING ANIMATIONS
+========================================================== */
+
+.whyImage{
+
+    animation:imageFloat 7s ease-in-out infinite;
+
+}
+
+.statCard:nth-child(odd){
+
+    animation:floatOne 8s ease-in-out infinite;
+
+}
+
+.statCard:nth-child(even){
+
+    animation:floatTwo 9s ease-in-out infinite;
+
+}
+
+.featureCard:nth-child(1){
+
+    animation:featureOne 8s ease-in-out infinite;
+
+}
+
+.featureCard:nth-child(2){
+
+    animation:featureTwo 9s ease-in-out infinite;
+
+}
+
+.featureCard:nth-child(3){
+
+    animation:featureThree 7s ease-in-out infinite;
+
+}
+
+.featureCard:nth-child(4){
+
+    animation:featureFour 10s ease-in-out infinite;
+
+}
+
+@keyframes imageFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes floatOne{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes floatTwo{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes featureOne{
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+@keyframes featureTwo{
+
+50%{
+
+transform:translateY(8px);
+
+}
+
+}
+
+@keyframes featureThree{
+
+50%{
+
+transform:translateX(-5px);
+
+}
+
+}
+
+@keyframes featureFour{
+
+50%{
+
+transform:translateX(5px);
+
+}
+
+}
+
+@keyframes whyGlowMove{
+
+from{
+
+transform:
+translate(0,0)
+scale(.9);
+
+}
+
+to{
+
+transform:
+translate(60px,-50px)
+scale(1.2);
+
+}
+
+}
+
+/* ==========================================================
+   HOVER EFFECTS
+========================================================== */
+
+.featureCard:hover{
+
+background:
+
+linear-gradient(
+145deg,
+rgba(255,255,255,.95),
+rgba(240,248,255,.82));
+
+}
+
+.statCard:hover{
+
+background:
+
+linear-gradient(
+145deg,
+rgba(255,255,255,.95),
+rgba(245,250,255,.82));
+
+}
+
+.featureCard:hover .featureNumber{
+
+transform:rotate(360deg);
+
+transition:.8s;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1100px){
+
+.whyContainer{
+
+grid-template-columns:1fr;
+
+gap:70px;
+
+}
+
+.whyLeft{
+
+text-align:center;
+
+}
+
+.whyLeft>p{
+
+max-width:700px;
+
+margin:auto;
+margin-top:30px;
+
+}
+
+.whyImage{
+
+max-width:700px;
+
+margin:auto;
+margin-bottom:35px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.why{
+
+padding:90px 0;
+
+}
+
+.whyContainer{
+
+width:92%;
+
+}
+
+.whyLeft h2{
+
+font-size:42px;
+
+}
+
+.statsGrid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.featureGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.whyImage{
+
+height:380px;
+
+}
+
+}
+
+@media(max-width:550px){
+
+.whyLeft h2{
+
+font-size:34px;
+
+}
+
+.whyLeft>p{
+
+font-size:16px;
+
+}
+
+.statsGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.whyImage{
+
+height:300px;
+
+}
+
+.featureCard{
+
+padding:22px;
+
+}
+
+.statCard{
+
+padding:22px;
+
+}
+
+.whyLeft span{
+
+font-size:11px;
+
+padding:8px 18px;
+
+letter-spacing:1px;
+
+}
+
+}
