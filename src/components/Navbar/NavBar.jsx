@@ -58,12 +58,12 @@ function Navbar() {
           About
         </a>
 
-        <a href="#services" onClick={closeMenu}>
+        <a href="/Services" onClick={closeMenu}>
           <span>03</span>
           Services
         </a>
 
-        <a href="#gallery" onClick={closeMenu}>
+        <a href="/Gallery" onClick={closeMenu}>
           <span>04</span>
           Gallery
         </a>
@@ -73,18 +73,18 @@ function Navbar() {
           Our Team
         </Link>
 
-        <a href="#faq" onClick={closeMenu}>
+        <a href="/faq" onClick={closeMenu}>
           <span>06</span>
           FAQ
         </a>
 
-        <a href="#contact" onClick={closeMenu}>
+        <a href="/contact" onClick={closeMenu}>
           <span>07</span>
           Contact
         </a>
       </div>
 
-      <a href="#contact" className="navbar-button">
+      <a href="/contact" className="navbar-button">
         Book Event
       </a>
 
