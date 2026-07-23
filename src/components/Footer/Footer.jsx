@@ -134,19 +134,19 @@ function Footer() {
 
           </h3>
 
-          <a href="#home">Home</a>
+          <a href="/Landingpage">Home</a>
 
-          <a href="#about">About</a>
+          <a href="/about">About</a>
 
-          <a href="#services">Services</a>
+          <a href="/Services">Services</a>
 
-          <a href="#gallery">Gallery</a>
+          <a href="/Gallery">Gallery</a>
 
-          <Link to="/team">Our Team</Link>
+          <a href="/team">Our Team</a>
 
-          <a href="#faq">FAQ</a>
+          <a href="/faq">FAQ</a>
 
-          <a href="#contact">Contact</a>
+          <a href="/Contact">Contact</a>
 
         </div>
 
@@ -198,7 +198,7 @@ function Footer() {
 
           <a
 
-            href="#contact"
+            href="/Contact"
 
             className="footer-btn"
 

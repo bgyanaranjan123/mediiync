@@ -9,7 +9,7 @@ import Contact from "./components/Contact/Contact.jsx";
 import Gallery from "./components/Gallery/Gallery";
 import GalleryDetails from "./components/Gallery/galleryDetail";
 import Services from "./components/Services/Services.jsx";
-
+import ScrollToTop from "./components/ScrollToTop";
 
 
 
@@ -17,6 +17,7 @@ function App() {
   return (
     <BrowserRouter>
         <Header />
+      <ScrollToTop />
       <Routes>
 
           <Route path="/" element={<Landingpage />} />
