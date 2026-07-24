@@ -1,83 +1,210 @@
-.services {
-  background: #0d1117;
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
+/*=========================
+    SERVICES OFFER
+==========================*/
+
+.services-offer{
+    padding:90px 8%;
+    text-align:center;
+    background:linear-gradient(180deg,#ffffff 0%,#f8f9ff 50%,#eef3ff 100%);
 }
 
-.services h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-  position: relative;
+.services-offer h1{
+    font-size:48px;
+    color:#243b7c;
+    font-weight:700;
+    margin-bottom:20px;
 }
 
-.services h1::after {
-  content: "";
-  display: block;
-  width: 120px;
-  height: 4px;
-  background: #00d4ff;
-  margin: 12px auto;
-  border-radius: 10px;
+.services-offer p{
+    max-width:700px;
+    margin:0 auto 35px;
+    color:#666;
+    font-size:18px;
+    line-height:1.8;
 }
 
-.subtitle {
-  color: #bdbdbd;
-  font-size: 18px;
-  margin-bottom: 35px;
+.book-btn{
+    padding:15px 40px;
+    background:#2d3e91;
+    color:#fff;
+    border:none;
+    border-radius:50px;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    margin-bottom:60px;
 }
 
-.book-btn {
-  padding: 14px 35px;
-  background: white;
-  color: #111;
-  border: none;
-  border-radius: 30px;
-  font-size: 17px;
-  cursor: pointer;
-  transition: 0.3s;
+.book-btn:hover{
+    background:#4356c4;
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(45,62,145,.25);
 }
 
-.book-btn:hover {
-  background: #00d4ff;
-  color: white;
+.offer-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
 }
 
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
-  margin-top: 60px;
+.offer-card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px 25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    border:1px solid #eef1ff;
+    transition:.3s;
 }
 
-.card {
-  background: #161b22;
-  padding: 30px 20px;
-  border-radius: 15px;
-  transition: 0.3s;
+.offer-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(45,62,145,.18);
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+.offer-card h3{
+    color:#243b7c;
+    margin-bottom:15px;
+    font-size:24px;
 }
 
-.icon {
-  font-size: 45px;
-  margin-bottom: 15px;
+.offer-card p{
+    color:#666;
+    line-height:1.7;
+    font-size:16px;
 }
 
-.card h3 {
-  margin-bottom: 10px;
-  color: #00d4ff;
+
+/*=========================
+    POPULAR SERVICES
+==========================*/
+
+.popular-services{
+    padding:90px 8%;
+    text-align:center;
+    background:#ffffff;
 }
 
-.card p {
-  color: #d0d0d0;
-  line-height: 1.6;
+.popular-services h1{
+    font-size:46px;
+    color:#243b7c;
+    margin-bottom:20px;
+}
+
+.popular-services p{
+    color:#666;
+    margin-bottom:50px;
+    font-size:18px;
+}
+
+.popular-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.popular-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.popular-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(45,62,145,.18);
+}
+
+.popular-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.image-placeholder{
+    width:100%;
+    height:220px;
+    background:#edf1ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#243b7c;
+    font-weight:600;
+    font-size:18px;
+}
+
+.popular-card h3{
+    margin:20px 0 15px;
+    color:#243b7c;
+    font-size:24px;
+}
+
+.popular-card p{
+    padding:0 20px;
+    color:#666;
+    line-height:1.7;
+    min-height:90px;
+}
+
+.arrow-btn{
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#2d3e91;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    margin:20px 0 30px;
+    transition:.3s;
+}
+
+.arrow-btn:hover{
+    background:#4356c4;
+    transform:scale(1.08);
+}
+
+
+/*=========================
+      Responsive
+==========================*/
+
+@media(max-width:992px){
+
+.offer-grid,
+.popular-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.offer-grid,
+.popular-grid{
+grid-template-columns:1fr;
+}
+
+.services-offer h1,
+.popular-services h1{
+font-size:34px;
+}
+
+.services-offer,
+.popular-services{
+padding:70px 6%;
+}
+
+.services-offer p,
+.popular-services p{
+font-size:16px;
+}
+
 }
