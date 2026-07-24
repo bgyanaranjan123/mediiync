@@ -16,25 +16,29 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <BrowserRouter>
-        <Header />
-      <ScrollToTop />
-      <Routes>
+   <BrowserRouter>
+    <Header />
 
-        <Route path="/" element={<Landingpage />} />
-        <Route path="/Landingpage" element={<Landingpage />} />
-        <Route path="/FAQ" element={<FAQ />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/team" element={<OurTeamPage />} />
-        <Route path="/Contact" element={<Contact />} /> 
-        <Route path="/Gallery" element={<Gallery />} />
-        <Route path="/Gallery/:id" element={<GalleryDetails />} />
-        <Route path="/Services" element={<Services />} />
+    <ScrollToTop />
 
-      </Routes>
-      <Footer />
-    </BrowserRouter>
-  );}
+    <main className="router-body">
+        <Routes>
+            <Route path="/" element={<Landingpage />} />
+            <Route path="/Landingpage" element={<Landingpage />} />
+            <Route path="/FAQ" element={<FAQ />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/team" element={<OurTeamPage />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Gallery" element={<Gallery />} />
+            <Route path="/Gallery/:id" element={<GalleryDetails />} />
+            <Route path="/Services" element={<Services />} />
+        </Routes>
+    </main>
+
+    <Footer />
+</BrowserRouter>
+  );
+}
 
 
 export default App;
